@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,700&family=Poppins:wght@100;200;300;400;500&display=swap');
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+
+    background: linear-gradient(100deg,#c8f4f8,rgba(239,252,248,0) );
+  
+  
+}
+/*  button CSS  Global*/
+button {
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  border: solid 1px #439ec7;
+  color: white;   
+  font-weight: bold;         
+  box-shadow: 0 0 20px #eee;
+  background-size: 200% auto;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  background-image: linear-gradient(to right, #3083e9 0%, #35f3f0  51%, #1877eb  100%)
+}
+/*  button CSS Clobal Hover*/
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+button:active {
+  box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+  transform: translateY(0em);
+}
+
+/*  button CSS Clobal Hover*/
+.download-btn{
+  border-radius: 10px;
+  padding: 5px 25px;
+  margin: 4px 10px;
+}
+
+/* Media Query for responsiveness */
+@media only screen and (max-width: 768px) {
+  button {
+    width: 80%;
+  }
+}
+
+/* all page header */
+.header-row  th,.card-header,.modal-header,.header-row {
+  background:rgb(207, 218, 230)!important;
+ 
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.header-row  th,.card-header,.modal-header{
+  text-align: center;
+}
+/* font color */
+
+label,.imageprice,.smalltags{
+  color: #111111 !important;
+  font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.small-btn{
+  border-radius: 10px;
+  padding: 1px 15px;
+  margin: 4px 10px;
+}
+         
+.header-row  th,.card-header,.modal-header,.header-row,.bigfont{
+  color: #111111 !important;
+}
