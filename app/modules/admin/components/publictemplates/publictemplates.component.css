@@ -1,0 +1,339 @@
+/* page responsive start*/
+@media (min-width: 342px) and (max-width: 1290px) {
+  .container-fluid {
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  img {
+    width: 103%;
+  }
+}
+
+/* page responsive end */
+/* menu bar css start*/
+.col-md-2 {
+  overflow-y: scroll;
+  max-height: 700px;
+  margin-right: -10px;
+
+}
+
+.col-md-2 div {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .col-md-2 {
+    max-height: 500px;
+  }
+}
+
+/*menu bar css end*/
+/* menu bar and img for the responsive start */
+@media (max-width: 610px) {
+  .col-md-2 {
+
+    max-width: 30%;
+  }
+
+  .col-md-10 {
+
+    max-width: 70%;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .col-md-2 {
+    max-width: 30%;
+  }
+
+  .col-md-10 {
+    max-width: 70%;
+  }
+
+}
+
+@media (max-width: 765px) {
+  .col-md-2 {
+    max-width: 30%;
+  }
+
+  .col-md-10 {
+    max-width: 70%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .col-md-10 {
+    background-size: contain;
+  }
+}
+
+@media (min-width: 40em) {
+  img {
+    width: 102%;
+
+  }
+}
+
+@media (min-width: 342px) {
+  img {
+    width: 108%;
+    /* Set the image width to 100% */
+  }
+
+}
+
+@media (min-width: 280px) {
+  img {
+    width: 112%;
+    /* Set the image width to 100% */
+    /* Maintain aspect ratio */
+  }
+
+}
+
+@media (min-width:412px) {
+  .image-container {
+    max-height: 500px;
+  }
+
+}
+
+@media (min-width:375px) {
+  .image-container {
+    max-height: 500px;
+  }
+
+}
+
+@media (min-width:360px) {
+  .image-container {
+    max-height: 500px;
+  }
+
+}
+
+@media (min-width:820px) {
+  .image-container {
+    max-height: 700px;
+  }
+
+}
+@media (min-width:280px) {
+  .image-container {
+    max-height: 500px;
+  }
+
+}
+
+@media (min-width:1024px) {
+  .image-container {
+    max-height: 700px;
+  }
+
+}
+
+@media (min-width: 770px) and (max-width: 1000px) {
+  .image-container {
+    max-height: 700px;
+  }
+}
+
+/* menu bar and img for the responsive end */
+/* Media queries for responsiveness */
+
+
+img {
+
+  width: 102%;
+  height: 100%;
+}
+
+.container-fluid {
+  overflow-x: hidden;
+}
+
+.col-md-10>.table {
+  overflow-y: scroll;
+  max-height: 700px;
+  margin-right: -10px;
+
+}
+
+/* Define styles for the scroll container */
+.scroll-container {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 700px;
+}
+
+/* Define styles for the image container */
+.image-container {
+  flex: 1;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.col-md-10 {
+  max-height: 700px;
+}
+
+/* customerdetails form start */
+.input {
+  display: flex;
+  align-items: center;
+  padding: -1.625rem 0.75rem;
+  font-size: -1rem;
+  font-weight: 400;
+  line-height: 0.2;
+  color: var(--bs-body-color);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--bs-tertiary-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+}
+
+.input p {
+  margin: 0;
+}
+
+.input i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  border: 1px solid var(--bs-border-color);
+  /* Add border to the icon */
+  padding: 5px;
+  /* Add padding to the icon */
+  border-radius: 10%;
+  /* For a circular shape */
+}
+
+.smallfont {
+  cursor: pointer;
+}
+
+/*customerdetails form end */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.smallfont:hover i,
+.smallfont.active i,
+.smallfont:focus i {
+  color: rgb(247, 58, 68) !important;
+}
+
+/* Optional: To change the text color as well */
+.smallfont:hover p,
+.smallfont.active p,
+.smallfont:focus p {
+  color: rgb(247, 58, 68) !important;
+}
+.templateimg{
+width: 800px; 
+height: 400px;
+}
+@media (min-width: 1024px) {
+  .templateimg {
+    width: 500px !important;
+  }
+}
+@media (min-width: 412px) {
+  .templateimg {
+    width: 100px !important;
+    height: 100px;
+  }
+  .smalltags{
+    font-size: 10px;
+  }
+  .download-btn{
+    width: 10px;
+    font-size: 10px;
+  }
+
+}
+@media (min-width: 280px) {
+  .templateimg {
+    width: 50px !important;
+    height: 80px;
+  }
+  .smalltags{
+    font-size: 6px;
+  }
+  .download-btn{
+    width: 5px;
+    font-size: 3px;
+  }
+
+}
+@media (min-width: 540px) {
+  .templateimg {
+    width: 150px ;
+    height: 80px;
+  }
+  .smalltags{
+    font-size: 6px;
+  }
+  .download-btn{
+    width: 13px;
+    font-size: 8px;
+  }
+
+}
+@media (min-width: 912px) {
+  .templateimg {
+    width: 400px;
+    height: 200px;
+  }
+  .smalltags{
+    font-size: 15px;
+  }
+  .download-btn{
+    width: 20px;
+    font-size: 10px;
+  }
+
+}
+@media (min-width: 1094px) {
+  .templateimg {
+    width: 700px !important;
+    height: 300px;
+  }
+  .smalltags {
+    font-size: 20px;
+  }
+  .download-btn {
+    width: 90px !important;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:1094px) {
+  button {
+    width: 30% !important;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .templateimg {
+    width: 600px !important;
+    height: 300px;
+  }
+  .smalltags {
+    font-size: 20px;
+  }
+  .download-btn {
+    width: 90px !important;
+    font-size: 12px;
+  }
+}

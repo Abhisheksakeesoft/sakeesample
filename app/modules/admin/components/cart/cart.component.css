@@ -1,0 +1,40 @@
+
+  .mat-table th,
+  .mat-table td {
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+
+  .subtotal .subtotal-text {
+    padding: 6px; /* Adjust subtotal text padding */
+  }
+  .center-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.table{
+  width: 80%;
+  text-align: center;
+}
+/* data table resposive */
+@media (max-width: 768px) {
+  .table {
+    overflow-x: auto;
+    display: block;
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .table {
+      overflow-x: auto;
+      display: block;
+      width: 80%;
+  }
+}
+@media (max-width: 484px) {
+  .table {
+      overflow-x: auto;
+      display: block;
+      width: 80%;
+  }
+}

@@ -1,0 +1,25 @@
+
+ /* customerdetails form end */
+ .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+
+/* my-component.component.css */
+.custom-time-input {
+position: relative;
+display: inline-block;
+}
+
+.ampm-dropdown {
+position: absolute;
+top: 0;
+right: -50px;
+}
+

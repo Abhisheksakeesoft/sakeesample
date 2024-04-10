@@ -1,0 +1,121 @@
+/* YourComponent.component.css */
+
+.image-container {
+  background-image: url('../../../../../assets/images/productgif.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 30%; /* Adjust the percentage based on your layout */
+  left: 30%; /* Center the text horizontally */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust text color as needed */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
+  font-weight: 1000;
+}
+.hidden{
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+    font-weight: 500;
+  }
+
+.fade{
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate3d(0, 0, 0);
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+
+h3 {
+  font-size: 3.84rem;
+  font-weight: 1000;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust text color as needed */
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-down {
+  animation: scrollDown 5s linear infinite;
+}
+
+/* YourComponent.component.css */
+
+/* YourComponent.component.css */
+
+.col-sm-6.text-center {
+  margin-top: 80px; /* Default margin for larger screens */
+
+  @media (max-width: 977px) {
+    margin-top: 0px; /* Adjust for screens up to 767px width */
+  }
+
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.col-sm-6.text-center div {
+  display: inline-block;
+}
+
+/* Additional CSS for making the image responsive */
+.img-fluid {
+  max-width: 90%;
+  height: auto;
+}
+         

@@ -1,0 +1,36 @@
+<html>
+
+    <body class="body">
+        <br><br><br><br><br>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow mx-auto text-center">
+                        <div class="card-header">
+                            <h2>Invoice</h2>
+                        </div>
+                        <div class="row">
+                            <div class="card-body">
+                                <div class="Download">
+                                    <!-- DOWNLOAD BUTTON -->
+                                    <button class="download-btn" (click)="generatePDF()">Download Invoice</button>
+                                </div>
+                                <!-- CANCEL BUTTON -->
+                                <div class="Cancel">
+                                    <button class="download-btn" (click)="cancel()">Cancel</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+        <!-- SPINNER FOR THE LOADING PAGE -->
+        <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+            <p style="color: white"> </p>
+        </ngx-spinner>
+
+    </body>
+
+</html>

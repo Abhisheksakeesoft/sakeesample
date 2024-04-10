@@ -1,0 +1,107 @@
+
+
+
+<div class="card" style="margin-left:3px; margin-right:3px;" id="card" >
+    
+  <div class="card-header">
+    <!-- HEADER -->
+    <h3 class="text-start">Payment Options</h3>
+  </div>
+
+  <div class="radio-container "><br>
+  <!-- First row: Credit/Debit -->
+  <div class="payment-option ">
+    <div class="option">
+    <input type="radio" id="CreditDebit" name="payment" value="Credit/Debit" (change)="onRadioChange('Credit/Debit')"
+      [(ngModel)]="selectedPayment">&nbsp;
+      <img src="../../../../../assets/images/payment images100.png">
+     <h3 class="smalltags">Credit/Debit</h3>
+    </div>
+    <!-- ==============================================
+      Credit Card Payment Section
+      =============================================== -->
+   <!--credit card form start -->
+   <div class="card col-md-10 mx-auto text-center" [hidden]="selectedPayment !== 'Credit/Debit'">
+    <form [formGroup]="cardForm">
+      <!-- cardnum label -->
+      <div class="form-group col-10 text-center">
+        <label class="label-width" for="card-number">&nbsp; CardNumber : </label>
+        <div id="card-number" class="center-content" #cardNumber></div>
+      </div>
+      <div class="form-group col-10 text-center">
+        <!-- card-expiry label -->
+        <label class="label-width" for="card-expiry">&nbsp;Card-expiry &nbsp;&nbsp;:&nbsp;</label>
+        <div id="card-expiry" class="center-content" #cardExpiry></div>
+      </div>
+      <div class="form-group col-10 text-center">
+        <!-- card cvc label -->
+        <label class="label-width" for="card-cvc">&nbsp; Card-cvc &nbsp;&nbsp;&nbsp; &nbsp; :&nbsp; </label>
+        <div id="card-cvc" #cardCvc class="center-content"></div>
+      </div>
+      <div class="col-12 text-center ">
+        <button class="download-btn" (click)="onSubmit()">Pay ₹{{Totalamountwithtax | number:'1.2-2' }}</button><br>
+      </div>
+    </form>
+  </div>
+  <!--credit card form end-->
+  </div><hr>
+
+    <!-- ==============================================
+      QR CODE
+      =============================================== -->
+
+      <div class="radio-container">
+  <div class="payment-option">
+    <div class="option">
+    <input type="radio" id="qrcode" name="payment" value="qrcode" (change)="onRadioChange('qrcode')">&nbsp;
+    <img src="../../../../../assets/images/upi50.jpg">
+    &nbsp;
+    <h3 class="smalltags"> QR Code</h3>
+    </div><br>
+      <!-- scanner image start -->
+      <div class="card col-md-6 mx-auto text-center" [hidden]="selectedPayment !== 'qrcode' ">
+        <img src="../../../../../assets/images/PhonePeQRedit.png">
+        <div class="col-12 text-center ">
+          <button class="download-btn" (click)=" scanner()">Pay ₹{{Totalamountwithtax | number:'1.2-2' }}</button><br>
+        </div>
+      </div>
+      <!-- scanner image end -->
+  </div>
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white"> </p>
+  </ngx-spinner>
+  </div><hr> 
+  <div class="radio-container">
+    <div class="payment-option">
+      <div class="option">
+        <!-- CALLING THE RADIO BUTTON FOR SELECT PAYMENT METHOD -->
+        <input type="radio" id="upi" name="payment" value="upi" (change)="onRadioChange('upi')" [(ngModel)]="selectedPayment">&nbsp;
+        <h3 class="smalltags">Razorpay</h3>
+      </div> 
+      <!-- UPI Payment Section -->
+      <div class="container">
+        <form #paymentForm="ngForm" class="payment-form" [hidden]="selectedPayment !== 'upi' ">
+          <div class="payment-container">
+            <label for="payAmount">Pay Amount:</label>
+            <input type="text" id="payAmount" placeholder="Enter Amount" [(ngModel)]="totalAmountWithTax" name="totalAmountWithTax" required />
+    
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Name" [(ngModel)]="name" name="name" required />
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="example@gmail.com" [(ngModel)]="email" name="email" required />
+    
+            <label for="mobile_no">Mobile Number:</label>
+            <input type="tel" id="mobile_no" placeholder="10 digit number" [(ngModel)]="contact" name="contact" required />
+            <div class="button-container">
+              <button type="button" (click)="pay()">Pay</button>
+            </div>
+          </div>
+        </form>
+        <div class="button-container"></div>
+      </div>
+    </div>
+  </div>
+  
+
+

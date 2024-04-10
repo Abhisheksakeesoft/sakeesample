@@ -1,0 +1,238 @@
+
+<html>
+    <body class="body"><br>
+<div class=" container">
+    <div class="col-md-10">
+        <button class="download-btn scroll-btn" (click)="createTemplateConfirmation()" [@fadeInOut]>
+            More Details
+          </button>
+          
+          
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/estate.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center" style="margin-top: 50px;">
+            <h4 #realEstateTitleText class="bigfont">Real Estate</h4>
+            <p class="smalltags" style="text-align: left;">Download the perfect real estate pictures. 
+                Find the best free real estate images. Enhancing your presentations, websites,
+                or marketing materials.
+            </p>
+            <div class="col-12 text-center">
+                <button class="download-btn" (click)="menubar(realEstateTitleText.innerText.trim(), 
+                $event)">Purchase Now</button>
+            </div>
+        </div>
+        
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 text-center" style="margin-top: 80px;">
+                <h4 #resortTitleText class="bigfont">Resort</h4>
+                <p class="smalltags" style="text-align: left;">Find the perfect resort pictures to elevate 
+                    our project. You can download any Resort images for phone wallpaper. 
+                </p>
+                <div class="col-12 text-center">
+                    <button class="download-btn" 
+                    (click)="menubar(resortTitleText.innerText.trim(), $event)">Purchase Now</button>
+                </div>
+            </div>
+   
+        
+        <div class="col-md-6 text-center">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/resortlook.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/wedding.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #WeddingTitleText class="bigfont"  >Wedding</h4>
+            <p   class="smalltags"  style="text-align: left;">Embarking on the journey of wedding planning, finding the perfect visuals to complement
+                 your vision is essential. Fortunately, there are several platforms that offer a plethora 
+                 of high-quality wedding stock photos to enhance our projects.</p>
+            <div class="col-12 text-center ">
+                <button class="download-btn"
+                 (click)="menubar(WeddingTitleText.innerText.trim(), $event)">Purchase Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #BirthdayTitleText  class="bigfont" >Birthday</h4>
+            <p   class="smalltags"  style="text-align: left;">Step into a world of celebratory moments with an array of vibrant and heartwarming birthday 
+                stock photos. Platforms like Unsplash, Pexels, and Pixabay offer a treasure trove of 
+                high-quality images capturing the essence of birthdays</p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(BirthdayTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/birthday.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/food.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4  #FoodTitleText class="bigfont" >Food</h4>
+            <p   class="smalltags" style="text-align: left;">Explore a variety of delicious food images on platforms like Unsplash, Pexels, and Pixabay.
+                 These high-quality photos showcase</p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(FoodTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #HotelTitleText  class="bigfont">Hotel</h4>
+            <p  class="smalltags" style="text-align: left;">The hotel template images, sourced from reputable platforms such as Unsplash, Pexels, and Pixabay.
+                 From luxurious suites to inviting common areas,
+                 these high-quality photos capture the essence of hospitality, promising a visual journey</p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(HotelTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/hotelhotel.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/preview (22).png" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #ShoppingTitleText  class="bigfont" >Shopping</h4>
+            <p  class="smalltags"  style="text-align: left;">Discover and download the trendiest shopping photos on our template. Immerse yourself in a collection
+                 of high-quality images capturing the essence of the shopping experience. </p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(ShoppingTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #ElectronicsTitleText  class="bigfont" >Electronics</h4>
+            <p  class="smalltags" style="text-align: left;">Explore and download high-quality, royalty-free electronics
+                 stock photos for commercial use on Depositphotos. </p>
+            <div class="col-12 text-center ">
+     <button class="download-btn" (click)="menubar(ElectronicsTitleText.innerText.trim(), $event)">
+        Purchase Now</button>
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/electronicsnew.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/preview (23).png" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #TravelTitleText class="bigfont">Travelling</h4>
+            <p  class="smalltags"  style="text-align: left;">
+                Explore the world through captivating lenses with template images vast collection of Travel Photos.
+                 Offering a high-quality images.</p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(TravelTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #HospitalTitleText class="bigfont">Hospitals</h4>
+            <p   class="smalltags" style="text-align: left;">Download the perfect hospital pictures.
+                 Find  the best free hospital images. Free for commercial use 
+                  </p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(HospitalTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/preview (24).png" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="../../../../../assets/images/medicine.jpg" 
+                style="border-radius: 10px;" >
+               
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center" style="margin-top: 80px;">
+            <h4 #MedicineTitleText class="bigfont">Medicine</h4>
+            <p  class="smalltags"  style="text-align: left;">Looking for free Medicine  Photos.
+                Get the best Pictures of Medicine template here Free & paying Images .</p>
+            <div class="col-12 text-center ">
+                <button class="download-btn" (click)="menubar(MedicineTitleText.innerText.trim(), $event)">
+                    Purchase Now</button>
+            </div>
+        </div>
+  
+    
+    </div>
+</div><br>
+
+
+</body>
+</html>

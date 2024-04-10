@@ -1,0 +1,145 @@
+.footer {
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+    padding: 3px 15px;
+    margin-bottom: 0;
+    clear: both;
+    /* Clear the floats */
+}
+
+.content {
+    /* Add margin or padding to create a gap before the footer */
+    margin-bottom: 20px;
+    /* Adjust the value as needed */
+}
+
+h3 {
+    color: aliceblue;
+    margin-left: 50px;
+    // text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 50px;
+    color: rgb(24, 23, 23);
+    padding: 3px 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex: 1;
+    margin: 10px;
+    max-width: 300px;
+    // margin-left: 100px;
+}
+
+.footer h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.footer h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Adjust this value to control the distance of the line from the text */
+    width: 50%;
+    height: 3px;
+    /* Adjust this value to control the line thickness */
+    background-color: red;
+    /* Line color */
+}
+
+span {
+    color: aliceblue;
+}
+
+a {
+    color: rgb(26, 25, 25);
+    align-items: center;
+
+}
+
+.sci {
+    margin-top: 15px;
+    display: flex;
+}
+
+
+.sci {
+    margin-top: 15px;
+    display: flex;
+}
+
+// ul {
+//     display: block;
+//     list-style-type: disc;
+//     margin-block-start: 1em;
+//     margin-block-end: 1em;
+//     margin-inline-start: 0px;
+//     margin-inline-end: 0px;
+//     padding-inline-start: 40px;
+// }
+.sci {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.sci-item {
+    // border: 2px solid black;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    /* Adjust the width as needed */
+    height: 30px;
+    /* Adjust the height as needed */
+    // border: 2px solid black;
+    background-color: #222;
+    // margin-left:50px;
+}
+
+.card:hover {
+    background: red;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.copyrightText {
+    width: 100%;
+    background: #03407e;
+    /* padding: 2px 0px; */
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 0px;
+}
+
+p {
+    color: aliceblue !important;
+}
+.custom-cursor {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px; /* Adjust margin as needed */
+    text-decoration: none;
+  }
+  .custom-cursor:hover
+  {
+    text-decoration: underline;
+  }
+  
+i{
+    color: white;
+}

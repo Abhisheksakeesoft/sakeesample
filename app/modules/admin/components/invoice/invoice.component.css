@@ -1,0 +1,16 @@
+.row {
+  display: flex; /* Make the immediate child of .row a flex container */
+  justify-content: space-between; /* Distribute space between the children horizontally */
+}
+
+.card-body {
+  display: flex; /* Make .card-body a flex container */
+  justify-content: space-between; /* Distribute space between the children horizontally */
+  align-items: center; /* Align items vertically in the center */
+ 
+}
+
+.Download, .Cancel {
+  flex: 1; /* Allow both .Download and .Cancel to share the available space equally */
+ 
+}

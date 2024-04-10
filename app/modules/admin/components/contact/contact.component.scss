@@ -1,0 +1,233 @@
+body {
+  overflow: hidden;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  /* Add border */
+  border-radius: 24%;
+  /* Make it a circle */
+  background: linear-gradient(45deg, #1abc9c, #149279);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  /* Match the height */
+  margin-right: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+  transition: 0.3s;
+  display: inline-block;
+
+}
+
+.social-icons {
+  display: flex;
+  width: 300px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.wrapper {
+  flex: 1;
+  /* Takes up remaining space */
+  padding: 20px;
+  /* Add padding for spacing */
+  // border: 1px solid #ccc; /* Optional: Add a border for visualization */
+  margin-left: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Define custom width for input fields with the class 'custom-input-size' */
+.custom-input-size {
+  padding: 15px;
+  /* Adjust the width value as needed */
+}
+
+/* If you want to style all form controls with a custom width, you can target the form-control class */
+.form-control {
+  padding: 15px;
+  /* Adjust the width value as needed */
+}
+
+
+.cconntainerrsss {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forms {
+  width: 100%;
+  max-width: 1150px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form {
+  background-color: #1abc9c;
+  position: relative;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 15px;
+}
+.small-image {
+  width: 150px; /* Set the desired width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure it's treated as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+}
+.footertitle img {
+  font-weight: 500;
+  font-size: 20px;
+}
+.icon{
+  width: 30px; /* Set the desired width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure it's treated as a block element */
+}
+.row {
+  display: flex;
+   justify-content: space-between;
+  /* Add other styles for row layout as needed */
+  overflow-y: hidden;
+}
+
+.image-with-text {
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  flex: 1;
+  /* Add styles for image column as needed */
+}
+
+
+.small-imageusa {
+  width: 180px; /* Set the desired width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure it's treated as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px;
+}
+
+@media (max-width: 480px){
+.conntainerrsss {
+    padding: 1.5rem;
+}
+@media (max-width: 850px) {
+  .forms {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contact-form:before {
+    top: -13px;
+    left: initial;
+    right: 70px;
+  }
+
+  .square {
+    transform: translate(140%, 43%);
+    height: 350px;
+  }
+
+  .big-circle {
+    bottom: 75%;
+    transform: scale(0.9) translate(-40%, 30%);
+    right: 50%;
+  }
+
+  .text {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .social-media {
+    padding: 1.5rem 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cconntainerrsss {
+    padding: 1.5rem;
+  }
+
+  .contact-info:before {
+    display: none;
+  }
+
+  .square,
+  .big-circle {
+    display: none;
+  }
+
+  .forms,
+  .contact-info {
+    padding: 1.7rem 1.6rem;
+  }
+
+  .text,
+  .information,
+  .social-media p {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .icon {
+    width: 23px;
+  }
+
+  .input {
+    padding: 0.45rem 1.2rem;
+  }
+}
+}
+span{
+font-weight: bold;
+}

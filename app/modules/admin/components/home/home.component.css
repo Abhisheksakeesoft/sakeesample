@@ -1,0 +1,63 @@
+
+
+/* Rest of the CSS code... */
+/* ========================style.css================================ */
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  margin-top: -10px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 20px;
+  color: rgb(12, 12, 12);
+  text-align: center;
+}
+.overlay-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.overlay-text p {
+  font-size: 16px;
+}
+.carousel-image
+{
+  margin-top: -10px;
+   border-radius: 15px;
+   height: 500px;
+}
+body{
+  margin-top: -3px;
+}
+
+
+.card {
+  --bs-card-border-color: initial;
+  border: none; 
+}
+
+/* Add this to your component's CSS file or your global styles */
+
+.scroll-btn {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom */
+  right: 20px; /* Adjust the distance from the right */
+ 
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  z-index: 999; /* Ensure the button is displayed on top of other elements */
+}
+
+

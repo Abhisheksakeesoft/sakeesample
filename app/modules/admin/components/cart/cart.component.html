@@ -1,0 +1,59 @@
+<html>
+
+  <body><br>
+    <!-- displaying selected images inside the datatable  start -->
+    <div class="center-table">
+      <table datatable [dtOptions]="dataSource" class="table table-bordered table-striped table-hover">
+        <!-- headers -->
+        <thead class="header-row">
+          <tr>
+            <th>Sr.No.</th>
+            <th>Imagename</th>
+            <th>Image</th>
+            <th>Imageprice</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let data of selectedImages; let i = index" class="header-row">
+            <td class="imageprice">{{ i + 1 }}</td>
+            <td class="imageprice">{{ data.event }}</td>
+            <td><img [src]="'data:image/png;base64,' + data.image" galleryimg="no"
+                style="max-width: 50%; height: auto;"></td>
+            <td class="imageprice">{{ imageprice[i] | number:'1.2-2' }}</td>
+            <td>
+              <!-- remove button -->
+              <button class="download-btn" (click)="removeImage(i)"><i class="fa-sharp fa-solid fa-trash">
+                </i>&nbsp;Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+
+            <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+              <p style="color: white"> </p>
+            </ngx-spinner>
+            <!-- total price -->
+           <!-- Assuming your table has two columns, adjust colspan accordingly if your table has more columns -->
+<td class="imageprice" colspan="2">
+  Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{ calculateTotalPrice() | number:'1.2-2' }}<br>
+  Tax(10%): {{ calculateTaxAmount() | number:'1.2-2' }}
+  <hr class="line" />
+  Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{  calculateGrandTotalWithTax() | number:'1.2-2' }}
+  <div>
+    <button *ngIf="calculateTotalPrice() > 0" class="download-btn" (click)="buynow()">Buynow</button>
+    <button *ngIf="calculateTotalPrice() <= 0" class="download-btn" (click)="goTotemplatePage()"> Template</button>
+  </div>
+</td>
+
+          </tr>
+        </tbody>
+      </table><br>
+    </div>
+    <!-- displaying selected images inside the datatable  end -->
+
+  </body>
+
+</html>

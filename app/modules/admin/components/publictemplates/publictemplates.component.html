@@ -1,0 +1,211 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <!--start the sidemenu bar -->
+    <div class="col-md-2 header-row ">
+      <div (click)="showSecondContainer()" (click)="menubar($event)" routerLinkActive="active"
+       [routerLink]="['/real-estate']"class="smallfont " >
+        <p><i class="fa-solid fa-house"></i> Real Estate</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)" routerLinkActive="active"
+      [routerLink]="['/real-estate']"  class="smallfont">
+        <p><i class="fas fa-hotel"></i>&nbsp;Resort</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)"  routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fas fa-ring"></i>&nbsp;Wedding</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)"  routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fas fa-birthday-cake"></i> &nbsp;Birthday</p>
+
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)" routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fas fa-bowl-food"></i> &nbsp;Food</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)"   routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fas fa-hotel"></i> &nbsp;Hotel</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)"  routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fa-solid fa-gift"></i>&nbsp;Shopping</p>
+      </div>
+
+      <div (click)="showSecondContainer()" (click)="menubar($event)"  routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p>
+          <i class="fas fa-stethoscope"></i>&nbsp;Medicine
+        </p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)"  routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fa-solid fa-hospital"></i> &nbsp;Hospitals</p>
+      </div>
+
+      <div (click)="showSecondContainer()" (click)="menubar($event)"  routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fa-solid fa-car"></i>&nbsp;Travelling</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)"   routerLinkActive="active"
+      [routerLink]="['/real-estate']" class="smallfont">
+        <p><i class="fas fa-car-battery"></i> &nbsp;Electronics</p>
+      </div>
+      <div (click)="showSecondContainer()" (click)="menubar($event)" routerLinkActive="active"
+      [routerLink]="['/real-estate']"  class="smallfont">
+        <p><i class="fas fa-hotel"></i> &nbsp;Convocation</p>
+      </div>
+    </div>
+    <!-- ending the side menu bar-->
+    <!-- start the images  displaying based the choosing menu -->
+    <div class="col-md-10">
+      <img src="../../../../../assets/images/ddm.png" alt="Image" *ngIf="showContainer1" class="img">
+      <div *ngIf="showContainer2 " class="text-end">
+        <!-- Use *ngIf to conditionally render based on the availability of the imageList -->
+        <div *ngIf="imageList.length > 0" class="text-end">
+          <!-- Shopping view cart icon  strat-->
+          <div class="text-end" *ngIf="!showCartButton">
+            <button class="download-btn" (click)="openPopup()">
+              <i class="fa-solid fa-cart-shopping"></i>&nbsp; View Cart
+            </button>
+          </div>
+          <!-- Shopping view cart icon  end-->
+          <div class="scroll-container">
+            <div class="image-container">
+              <table [dtOptions]="dtOptions" class="table">
+                <tbody>
+                  <div class="card" *ngFor="let item of imageList; let i = index">
+                    <div class="placeholder" *ngIf="!item.image">
+                      <!-- Placeholder or loader -->
+                      Loading...
+                    </div>
+                    <div *ngIf="item.image">
+                      <!-- Actual image when available -->
+                      <td class="center">
+                        <img [src]="'data:image/png;base64,' + item.image"
+                          (contextmenu)="handleContextMenu($event, item)" galleryimg="no" 
+                          class="templateimg">
+                      </td>
+                      <td class="smalltags">Price:{{ item.imageprice | number:'1.2-2' }}</td>
+
+                      <td class="center">
+                        <button class="download-btn" *ngIf="item.imageprice == 0"
+                          (click)="downloadimage(item.image, 'image.png')">
+                          Download
+                        </button>
+                        <button class="download-btn" *ngIf="item.imageprice > 0" (click)="addToCart(item)"
+                          [disabled]="isAddedToCart(item)">
+                          {{ isAddedToCart(item) ? 'Added' : 'AddtoCart' }}
+                        </button>
+                      </td>
+                    </div>
+                  </div>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end the images  displaying based the choosing menu -->
+  </div>
+  <!-- starting the customer model-->
+  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{ 'display': displayStyle, 
+'position': 'absolute', 'top': '0', 'left': '0' }">
+    <div class="modal-dialog" role="document" style="overflow: hidden; margin-top: 100px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Customer Details</h3>
+          <button class="small-btn" (click)="closePopup()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="container">
+
+              <div class="card bg-light">
+                <div class="card-body mx-auto" style="max-width: 400px;">
+                  <form>
+                    <div class="row">
+                      <!-- Customer Name Field -->
+                      <div class="col-md-6">
+                        <div class="form-group input-group">
+                          <div class="input-group-prepend">
+                            <span class="input">
+                              <p><i class="fa fa-user"></i></p>
+                            </span>
+                          </div>
+                          <input type="text" id="customerName" [(ngModel)]="customerName" name="customerName"
+                            class="form-control custom-input" placeholder="Customer Name" />
+                        </div>
+                      </div><br>
+                  
+                      <!-- Customer Email Field -->
+                      <div class="col-md-6">
+                        <div class="form-group input-group">
+                          <div class="input-group-prepend">
+                            <span class="input">
+                              <p><i class="fa fa-envelope"></i></p>
+                            </span>
+                          </div>
+                          <input type="email" id="customerEmail" [(ngModel)]="customerEmail" name="customerEmail"
+                            class="form-control custom-input" placeholder="Customer Email" />
+                        </div>
+                      </div>
+                    </div><br>
+                  
+                    <!-- Other Input Fields (Phone Number, Current Address, etc.) go here -->
+                  
+                    <!-- Customer Phone Number Field -->
+                    <div class="row">
+                      <!-- Customer Name Field -->
+                      <div class="col-md-6">
+                    <div class="form-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input">
+                          <p><i class="fa fa-phone"></i></p>
+                        </span>
+                      </div>
+                      <input type="tel" id="customerPhone" name="customerPhone" [(ngModel)]="customerPhone"
+                        class="form-control custom-input" placeholder="Customer Phone" pattern="[0-9]{10}"
+                        oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10)" required />
+                    </div>
+                  </div>
+                    <!-- Current Address Field -->
+                   
+                      <!-- Customer Name Field -->
+                      <div class="col-md-6">
+                    <div class="form-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input">
+                          <p><i class="fa-solid fa-map-pin"></i></p>
+                        </span>
+                      </div>
+                      <input type="text" id="currentAddress" [(ngModel)]="currentAddress" name="currentAddress"
+                        class="form-control custom-input" placeholder="Current Address" />
+                    </div>
+                    </div>
+                    </div>
+                  </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <div class="form-group text-end">
+                    <button type="button" class="btn btn-primary btn-block" (click)="  logValues()"> OK </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ending the customer model -->
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white"> </p>
+  </ngx-spinner>
+</div>

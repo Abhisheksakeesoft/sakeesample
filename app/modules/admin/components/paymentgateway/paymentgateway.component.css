@@ -1,0 +1,170 @@
+.payment-option {
+  text-align: center;
+  max-width: 460px;
+}
+
+.cards {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2), 0 3px 11px 0 rgba(0, 0, 0, 0.14),
+    0 0px 0px 0 rgba(0, 0, 0, 0.12) !important;
+  transform: translate3d(0, 0, 0);
+  margin-bottom: 20px;
+  margin-left:90px;
+  @media (max-width: 835px) {
+    margin-left: 0; /* Adjust margin for screens with a width of 768 pixels or less */
+  }
+}
+
+.radio-container {
+
+  align-items: center;
+
+  }
+  
+
+@media (max-width: 768px) {
+  .payment-option {
+    flex-basis: calc(80% - 50px);
+  }
+}
+
+.card-box {
+  font-weight: 800;
+  padding: 1em 1em;
+  border-radius: 0.25em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+.payment-option label {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+form.checkout {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  background: white;
+  font-family: monospace;
+  color: #525252;
+  font-size: 1.1rem;
+}
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+   box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.14),0 8px 8px 0 rgba(0, 0, 0, 0.12) !important; 
+  transform: translate3d(0, 0, 0);
+  margin-bottom:8px;
+  margin-top: 10px;
+  margin-left:90px;
+  @media (max-width: 768px) {
+    margin-left: 0; /* Adjust margin for screens with a width of 768 pixels or less */
+  }
+  @media (max-width: 835px) {
+    margin-left: 0; /* Adjust margin for screens with a width of 768 pixels or less */
+  }
+}
+.payment-option input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  flex: 1; 
+  font-size: 16px;
+  margin-right: 10px; 
+}
+
+#card-number,
+#card-holder,
+#card-expiry,
+#card-cvc {
+  flex: 2;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.form-group label {
+  white-space: nowrap;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.form-group div {
+  flex: 1;
+
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+  padding-left: 20px;
+}
+.center-content {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 6px;
+}
+.label-width {
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+.card-box {
+  font-weight:800;
+  padding: 1em 1em;
+  border-radius: 0.25em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.option {
+  display: flex;
+margin-left:20px;
+
+  @media (max-width: 768px) {
+    margin-left: 0; /* Adjust margin for screens with a width of 768 pixels or less */
+  }
+  @media (max-width: 835px) {
+    margin-left: 0; /* Adjust margin for screens with a width of 768 pixels or less */
+  }
+}
+#card {
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
+  /* Additional styles for non-responsive situations */
+
+  @media (max-width: 768px) {
+    height: 100vh; /* Adjust height for screens with a width of 768 pixels or less */
+  }
+  @media (max-width: 1024px) {
+    height: 100vh; /* Adjust height for screens with a width of 768 pixels or less */
+  }
+}
+.payment-container {
+  border: 1px solid #ccc; /* border style */
+  padding: 10px; /* padding around the content */
+  width: 300px; /* width of the container */
+  margin: 0 auto; /* center align */
+  justify-content: space-between; /* justify content */
+  display: flex; /* make it a flex container */
+  flex-direction: column; /* arrange items in a column */
+}
+

@@ -1,0 +1,153 @@
+<html>
+
+  <body class="body">
+    <br>
+    <div class="container" [@slideDown]="isAnimationStarted">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-header">
+              <h3>Book Our Demo</h3>
+              <h5 style="text-align: center;">Fill in the form below and send us your request.</h5>
+            </div>
+            <div class="card-body">
+              <!-- form is strating-->
+              <form [formGroup]="bookourdemo">
+                <!--  customername Area Start -->
+                <div class="form-fields-container">
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <div class="input_box">
+                        <label>CustomerName</label>
+                        <input type="text" id="CustomerName" required class="form-control"
+                          formControlName="CustomerName" name="CustomerName" />
+                      </div>
+                    </div>
+
+                  
+                  <!--  customername Area end -->
+                  <!--companyname Area Start -->
+                  
+                    <div class="form-group col-6">
+                      <div class="input_box">
+                        <label>Email</label>
+                        <input type="text" id="Email" class="form-control" name="Email" formControlName="Email" />
+                      </div>
+                    </div>
+                  </div><br>
+                  <!--  companyname Area end -->
+
+                  <!-- email Area Start-->
+                  <div class="row">
+                    <div class="form-group col-6">
+                    
+                      <div class="input_box">
+                        <label>CompanyName</label>
+                        <input type="text" id="CompanyName" class="form-control" name="CompanyName"
+                          formControlName="CompanyName" />
+
+                      </div>
+                    </div>
+                 
+                  <!-- email Area end-->
+              
+                    <!-- country area start -->
+                    <div class="form-group col-6">
+                      <div class="input_box">
+                        <label for="country">Country:</label>
+                        
+                        <select  #country name="country" id="country" class="form-control" (change)="onCountryChange($event)">
+                          <option [value]="null">-- Select Your Country --</option>
+                          <!-- <option *ngFor="let country of countries" [value]="country.code | json">
+                            {{ country.flag }}&nbsp;&nbsp;{{ country.name }}
+                          </option> -->
+                          <option *ngFor="let country of countries" [value]="country | json">
+                            {{ country.name }}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- country area end-->
+                  <br>
+                  <!-- Your existing HTML -->
+                  <!-- date Area start  -->
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <div class="input_box">
+                        <label>Date</label>
+                        <input type="date" id="date" class="form-control" name="date" formControlName="date" />
+                      </div>
+                    </div>
+
+                    <!-- date Area end -->
+                    <!-- time Area start  -->
+
+                    <div class="form-group col-6">
+                      <div class="input_box">
+                        <label for="Time">Time</label><br>
+                        <!-- <input
+                          matInput
+                          [ngxTimepicker]="picker"
+                          formControlName="Time"
+                          placeholder="HH:mm"
+                          [(ngModel)]="selectedTime"
+                          (ngModelChange)="updateFormControl($event)"
+                        />
+                        <ngx-material-timepicker
+                          #picker
+                          [userTime]="selectedTime"
+                          (userTimeChange)="selectedTime = $event"
+                          [format]="24">
+                          
+                        </ngx-material-timepicker> -->
+                        <input type="time" id="time" class="form-control" name="time" formControlName="time" required>
+                        
+                          </div>
+                  
+                    </div>
+                  </div><br>
+                  <!--  time Area end -->
+                  <!-- contact Area Start -->
+                  <!-- <div class="row">
+                    <div class="form-group col-12">
+                      <div class="input_box">
+                        <label>Contact</label>
+
+                        <input type="tel" id="Contact" name="Contact" class="form-control custom-input"
+                          pattern="[0-9]{10}" formControlName="Contact"
+                          oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10)" required />
+                      </div>
+                    </div>
+                  </div><br> -->
+
+                  <!--  contact Area end -->
+                  <!--submit button Start-->
+                  <div class="card-footer text-center">
+                    <button class="download-btn" (click)="Onsubmit()">Submit</button>
+
+                    <button class="download-btn" (click)="resetForm()">Cancel</button>
+                  </div>
+                  <!-- submit button end-->
+                </div>
+                
+              </form>
+              <!-- form is ending -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div>
+     
+  </div>
+  
+
+    <!-- spinner for the loading -->
+    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+      <p style="color: white"> </p>
+    </ngx-spinner>
+
+  </body>
+
+</html>
